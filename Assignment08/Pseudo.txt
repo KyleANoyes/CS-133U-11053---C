@@ -1,0 +1,7 @@
+Calculator InitCalculator(Calculator aCalc) - initialize the data member to 0.0
+Calculator Add(double val, Calculator aCalc) - add the parameter to the data member
+Calculator Subtract(double val, Calculator aCalc) - subtract the parameter from the data member
+Calculator Multiply(double val, Calculator aCalc) - multiply the data member by the parameter
+Calculator Divide(double val, Calculator aCalc) - divide the data member by the parameter
+Calculator Clear(Calculator aCalc) - set the data member to 0.0
+double GetValue(Calculator aCalc) - return the data member

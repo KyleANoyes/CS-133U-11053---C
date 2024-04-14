@@ -1,0 +1,34 @@
+START
+ 
+Struct Number_struct as Number
+- - DECLARE Int num
+
+Function Swap(Number* numPtr1, Number* numPtr2)
+- - DECLARE Int tempData1 
+- - SET tempData1 = numPtr1->num
+- - DECLARE Int tempData2
+- - SET tempData2 = numPtr2->num
+- - 
+- - SET numPtr1->num = tempData2
+- - SET numPtr2->num = tempData1
+
+Function main(void)
+- - DECLARE Number* num1
+- - DECLARE Number* num2
+- - 
+- - DISPLAY "Welcome to my Swapping Numbers Program!\n"
+- - 
+- - DISPLAY "\nEnter 2 numbers and I will swap them for you!!\n"
+- - INPUT num1, num2
+- - 
+- - DISPLAY "\nYou entered:    num1 = %d and num2 = %d\n", num1, num2
+- - 
+- - CALL Swap(&num1, &num2)
+- - 
+- - DISPLAY "After swapping: num1 = %d and num2 = %d\n", num1, num2
+- - 
+- - DISPLAY "\nThank you for using my program!\n"
+- - 
+- - RETURN 0
+
+END

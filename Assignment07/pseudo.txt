@@ -1,0 +1,73 @@
+START
+
+FUNCTION GetUserInput(Int numVals)
+- - DECLARE Int i
+- - 
+- - FOR i = 0 TO i == numVals
+- - - - DISPLAY Enter number {i}
+- - - - INPUT userValues[i]
+- - 
+- - RETURN userValues
+
+
+FUNCTION Int GetMaxInt(Int listInts[], Int numVals)
+- - DECLARE Int valueMax
+- - DECLARE Int i
+- - 
+- - SET valueMax = listInts[0]
+- - FOR i = 1 TO i <= listInts[0]
+- - - - IF listInts[i] > valueMax
+- - - - - - valueMax = listInts[i]
+- - 
+- - RETURN valueMax
+
+
+FUNCTION Int MakeNormals(Int userValues[], Int valueMax, Int numVals)
+- - DECLARE Int i
+- - DECLARE listNormals[numVals]
+- - 
+- - FOR i = 0 TO i == numValues
+- - - - SET listNormals[i] = valueMax - userValues[i]
+- - 
+- - RETURN listNormals
+
+
+FUNCTION Int OutputData(Int listNormals, Int numVals)
+- - DECLARE Int i
+- - 
+- - DISPLAY The normalized data values are: 
+- - FOR i = 0 TO i == numVals
+- - - - DISPLAY {listNormals[i]} 
+- - DISPLAY
+
+
+FUNCTION Int main (void)
+- - DECLARE Int userValues
+- - DECLARE Int valueMax
+- - DECLARE Int numVals
+- - DECLARE Int listNormals[20]
+- - 
+- - DISPLAY "Hello! Welcome to my data normalization program!"
+- - 
+- - DO
+- - - - DISPLAY Please enter amount of numbers to be normalized (ex: 5 for five-following numbers)
+- - - - INPUT numVals
+- - - - 
+- - - - IF numVals > 12 || numVals <= 0
+- - - - - - DISPLAY Error: Number cannot be less than zero or greater than 20
+- - - - 
+- - WHILE numVals > 0 AND numVals < 20
+- - 
+- - SET userValues = GetUserInput(numValues)
+- - 
+- - SET valueMax = GetMaxInt(userValues, numVals)
+- - 
+- - SET listNormals = MakeNormals(userValues, valueMax, numVals)
+- - 
+- - OutputData(listNormals, numVals)
+- - 
+- - DISPLAY Thank you for using this normalization program!
+- - 
+- - RETURN 0
+
+END

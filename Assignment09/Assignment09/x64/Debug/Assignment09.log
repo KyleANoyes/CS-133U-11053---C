@@ -1,0 +1,17 @@
+﻿  a09.c
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(36,11): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'Number **'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(36,11): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 2 has type 'Number **'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(38,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(38,12): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(38,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(38,12): warning C4313: 'printf': '%d' in format string conflicts with argument 2 of type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(41,10): warning C4047: 'function': 'Number *' differs in levels of indirection from 'Number **'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(41,10): warning C4024: 'Swap': different types for formal and actual parameter 1
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(41,17): warning C4047: 'function': 'Number *' differs in levels of indirection from 'Number **'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(41,17): warning C4024: 'Swap': different types for formal and actual parameter 2
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(43,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(43,12): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(43,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(43,12): warning C4313: 'printf': '%d' in format string conflicts with argument 2 of type 'Number *'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\a09.c(36,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Assignment09.vcxproj -> D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment09\x64\Debug\Assignment09.exe
