@@ -1,0 +1,61 @@
+START
+
+DECLARE handComp as String
+DECLARE randomNum as Int
+DECLARE handUser as String
+DECLARE userInput as String
+
+DISPLAY “Lets play Rock, Paper, Scissors!”
+
+DISPLAY “Please type “Rock”, “Paper”, or “Scissors” to choose your hand.”
+DISPLAY “Note: You can type “R”, “P”, or “S” too.”
+
+DISPLAY “Please choose your Hand: ”
+INPUT userInput
+IF userInput[0] == “r” OR userInput[0] == “R”
+    handUser = Rock
+ELSE IF userInput[0] == “p” OR userInput[0] == “P”
+    handUser = Paper
+ELSE IF userInput[0] == “s” OR userInput[0] == “S”
+    handUser = Scissors
+ELSE
+    DISPLAY userInStr + “is not a valid input.”
+    DISPLAY “Please run the program again.”
+    RETURN 0
+DISPLAY “You have chosen ” + handUser
+
+SET randomNum = random(0 though 2)
+IF randomNum == 0
+    handComp = Rock
+ELSE IF randomNum == 1
+    handComp = Paper
+ELSE
+    handComp = Scissors
+DISPLAY “The computer chose: “ + handComp
+
+IF handUser == handComp
+    DISPLAY “You both chose “ + handUser + “, it’s a tie!”
+ELSE IF handUser == Rock AND handComp == Paper
+    DISPLAY handComp + “ beats ” + handUser + “.”
+    DISPLAY “The computer has won!”
+ELSE IF handUser == Rock AND handComp == Scissors
+    DISPLAY handUser + “ beats ” + handComp + “.”
+    DISPLAY “Congratulations, you won!
+ELSE IF handUser == Paper AND handComp == Scissors
+    DISPLAY handComp + “ beats ” + handUser + “.”
+    DISPLAY “The computer has won!”
+ELSE IF handUser == Paper AND handComp == Rock
+    DISPLAY handUser + “ beats ” + handComp + “.”
+    DISPLAY “Congratulations, you won!
+ELSE IF handUser == Scissors AND handComp == Rock
+    DISPLAY handComp + “ beats ” + handUser + “.”
+    DISPLAY “The computer has won!”
+ELSE IF handUser == Scissors AND handComp == Paper
+    DISPLAY handUser + “ beats ” + handComp + “.”
+    DISPLAY “Congratulations, you won!
+ELSE
+    DISPLAY !Application error. Please alert the programmer!
+    RETURN 0
+
+DISPLAY “Thank you for playing!”
+

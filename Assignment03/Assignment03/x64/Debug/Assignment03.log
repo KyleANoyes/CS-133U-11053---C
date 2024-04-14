@@ -1,0 +1,15 @@
+﻿  main.c
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(55,60): warning C4474: 'printf' : too many arguments passed for format string
+  D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(55,60):
+  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(60,5): warning C4013: 'srand' undefined; assuming extern returning int
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(61,17): warning C4013: 'rand' undefined; assuming extern returning int
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(95,16): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(95,16): warning C4313: 'printf': '%s' in format string conflicts with argument 1 of type 'int'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(95,16): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 2 has type 'int'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(95,16): warning C4313: 'printf': '%s' in format string conflicts with argument 2 of type 'int'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(26,10): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(27,10): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\main.c(28,10): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+  Assignment03.vcxproj -> D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment03\x64\Debug\Assignment03.exe
