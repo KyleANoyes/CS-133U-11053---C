@@ -1,0 +1,50 @@
+START
+
+FUNCTION Double getPercentEven(Int indexTotal, Int *numList)
+- - DECLARE Int index
+- - DECLARE Double numEven = 0
+- - DECLARE Dobule percEven
+- - DECALRE Int calcOddEven
+- - 
+- - FOR index = 0 TO index = indexTotal
+- - - - calcOddEven = numList[index]
+- - - - 
+- - - - IF calcOddEven % 2 == 0
+- - - - - - numEven = numEven + 1
+- -
+- - SET percEven = (numEven / indextotal) * 100
+- - 
+- - return percEven
+
+
+
+FUNCTION Int Main(void)
+- - DECLARE Int arrSize
+- - DECLARE Int i
+- - DECLARE Double percentEven
+- - 
+- - DISPLAY "Welcome to my Final."
+- - DISPLAY "How many numbers would you like in your list?"
+- - 
+- - INPUT arrSize
+- - 
+- - DECLARE Array numArr[arrSize]
+- - 
+- - IF arrSize > 0
+- - - - DISPLAY "Please enter the values for your list separated by a space: "
+- - - - 
+- - - - FOR i = 0 TO i = arrSize
+- - - - - - INPUT numArr[i]
+- - - - 
+- - - - SET percentEven = CALL Function getPErcentEven(arrSize, numArr)
+- -
+- - ELSE
+- - - - percentEven = 0
+- - 
+- - DISPLAY "The percent of even values: %.1f%%", percentEven
+- - DISPLAY "Thank you for using my program!"
+- - 
+- - RETURN 0
+END FUNCTION
+
+END

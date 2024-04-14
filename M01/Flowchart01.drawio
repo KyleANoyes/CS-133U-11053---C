@@ -1,0 +1,86 @@
+<mxfile host="Electron" modified="2024-01-11T02:28:35.989Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="ewpcEdEec1II8GzGg99p" version="22.1.18" type="device">
+  <diagram name="Page-1" id="MgNDPnjHiMI8pNKQWRie">
+    <mxGraphModel dx="1430" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FvkxjbLzrP3y95egPvh6-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-1" target="FvkxjbLzrP3y95egPvh6-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="278" y="190" />
+              <mxPoint x="278" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-1" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="180" width="116" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-2" target="FvkxjbLzrP3y95egPvh6-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-2" value="Get input IO, get 1/0 toggle, get files" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-5" target="FvkxjbLzrP3y95egPvh6-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-5" value="Place loose files to same location as 3 organization folders" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-7" target="FvkxjbLzrP3y95egPvh6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-7" value="Begin with 3 organization folder and and number of loose files" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="370" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-11" target="FvkxjbLzrP3y95egPvh6-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-11" value="Look at file at the top of the list" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-14" target="FvkxjbLzrP3y95egPvh6-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-14" value="Remove every character excluding the first character" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-16" value="Determine if remaining character matches type 0-1; A-Z; or neither" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="660" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-20" target="FvkxjbLzrP3y95egPvh6-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-20" value="Hover Mouse w/IO over file, toggle 1 click" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-21" target="FvkxjbLzrP3y95egPvh6-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-21" value="Move Mouse w/ IO to folder name matching type. If neither type, move to Misc folder" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FvkxjbLzrP3y95egPvh6-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="955" />
+              <mxPoint x="390" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-24" value="More than 0 remainig files?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="920" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FvkxjbLzrP3y95egPvh6-27" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="336" y="920" width="40" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

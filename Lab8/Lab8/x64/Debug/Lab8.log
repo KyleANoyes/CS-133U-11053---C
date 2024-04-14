@@ -1,0 +1,5 @@
+﻿  Main.c
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Lab8\Main.c(14,6): warning C4101: 'num1': unreferenced local variable
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Lab8\Main.c(16,6): warning C4101: 'qty': unreferenced local variable
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Lab8\Main.c(15,6): warning C4101: 'num2': unreferenced local variable
+  Lab8.vcxproj -> D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Lab8\x64\Debug\Lab8.exe
