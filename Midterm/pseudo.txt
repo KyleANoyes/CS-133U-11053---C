@@ -1,0 +1,104 @@
+Write a program that takes three integers as input: low, high, and x. The program then outputs the 
+number of multiples of x between low and high inclusive.
+
+Ex: If the input is:
+1 10 2
+the output is
+5
+
+// Does this include decimals? How are we handling remainders?
+
+Repeat until the user enters ‘n’ or wants to quit the program.
+
+If the user enters any negative number, output an error message and ask for the input again.
+
+If low is not less than high, output an error message and repeat the program.
+
+Hint: Use the % operator to determine if a number is a multiple of x. Use a for loop to test 
+each number between low and high.
+
+
+
+Welcome to my Midterm.
+Enter 3 positive whole numbers - low, high, and x. This program then outputs the number of multiples of x between low and high inclusive. Please make sure low is less than high.
+3 15 5
+Number of multiples of 5 between 3 and 15: 3
+Do you want to continue? (y/n): y
+
+Enter 3 positive whole numbers - low, high, and x. This program then outputs the number of multiples of x between low and high inclusive. Please make sure low is less than high.
+15 1 5
+Invalid input! Low must be less than high!! Please try again.
+
+Enter 3 positive whole numbers - low, high, and x. This program then outputs the number of multiples of x between low and high inclusive. Please make sure low is less than high.
+13 45 9
+Number of multiples of 9 between 13 and 45: 4
+Do you want to continue? (y/n): n
+
+Thank you for using my program!
+
+
+DECLARE Int userLow;
+DECLARE Int userHigh;
+DECLARE Int userMult;
+DECLARE Int numDiff;
+DECLARE Int numDivCount;
+DECLARE Str userChoice[256] = "0";
+DECLARE keepGoing;
+
+DISPLAY "Hello! Welcome to my midterm for CS-133U-11053"
+DISPLAY "Developer: Kyle Noyes"
+DISPLAY "Date: February 18th, 2024"
+
+DISPLAY "Welcome to this multiples-counter."
+
+WHILE userChar != "n"
+- - keepGoing = 0
+- - DISPLAY "Please enter 3-whole numbers with the first being your low number, second being"
+- - DISPLAY "the high number, and third being the multiples to check between low and high"
+- - 
+- - DISPLAY "Input: "
+- - INPUT userLow, userHigh, userMult
+- - 
+- - // Validate data inputs
+- - IF userLow >= userHigh
+- - - - DISPLAY "Invalid entry, the low number (first) must be less than the high"
+- - - - DISPLAY "number. Please try again."
+- - - - keepGoing = 1
+- - 
+- - IF userMult >= userHigh
+- - - - DISPLAY "Invalid entry, the multiples (third) must be less than the high"
+- - - - DISPLAY "number. Please try again."
+- - - - keepGoing = 1
+- - 
+- - IF userMult >= userHigh
+- - - - DISPLAY "Invalid entry, the multiples (third) can not be zero."
+- - - - DISPLAY "number. Please try again."
+- - - - keepGoing = 1
+- - 
+- - IF userLow < 0
+- - - - DISPLAY "Invalid entry, the low number (first) can not be a negative"
+- - - - DISPLAY "number. Please try again."
+- - - - keepGoing = 1
+- - 
+- - IF userHigh < 0
+- - - - DISPLAY "Invalid entry, the high number (second) can not be a negative"
+- - - - DISPLAY "number. Please try again."
+- - - - keepGoing = 1
+- - 
+- - IF userMult < 0
+- - - - DISPLAY "Invalid entry, the multiples number (third) can not be a negative"
+- - - - DISPLAY "number. Please try again."
+- - - - keepGoing = 1
+- - 
+- - IF keepGoing == 0:
+- - - - SET numDiff = userHigh - userLow
+- - - - SET numDivCount = numDiff / userMult
+- - - - DISPLAY "The number of multiples of {userMulti} between {userLow} and {userHigh} is: {numDivCount}"
+- - 
+- - ELSE:
+- - - - PASS
+- - 
+- - DISPLAY "Would you like to continue? ("Y/N")"
+- - INPUT userChoice
+
+DISPALY "Thank you for using my multiples check program!"

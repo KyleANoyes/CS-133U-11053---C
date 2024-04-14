@@ -1,0 +1,80 @@
+---- Main.c ----
+
+INCLUDE Calculator.h
+
+DECLARE calc = InitCalculation(calc) //Initializes as 0
+DECLARE Double num1
+DECLARE Double num2
+
+DISPALY "Welcome to my program!"
+DISPLAY "Enter 2 nums"
+
+INPUT num1
+INPUT num2
+
+DISPLAY "The starting value" + CALL GetValue(calc)
+
+SET calc = CALL Add(num1, Calc)
+DISPLAY "The new value is" + CALL GetValue(calc)
+
+SET calc = CALL Multiply(3, num1)
+DISPLAY "The new value is" + CALL GetValue(calc)
+
+SET calc = CALL Subtract(num2, Calc)
+DISPLAY "The new value is" + CALL GetValue(calc)
+
+SET calc = CALL Divide(2, Calc)
+DISPLAY "The new value is" + CALL GetValue(calc)
+
+SET calc = CALL Clear(Calc)
+DISPLAY "The new value is" + CALL GetValue(calc)
+
+DISPLAY "Thanks for using this :)"
+
+RETURN 0
+
+
+---- Calculator.c ----
+
+INCLUDE Calculator.h
+
+FUNCTION Calculator InitCalculator(Calculator, aCalc)
+- - SET aCalc.value = 0.0;
+
+- - RETURN aCalc
+
+FUNCTION Calculator Add(Double val, Calculator aCalc)
+- - SET aCalc.vale = aCalc.value + val
+
+- - RETURN aCalc
+
+FUNCTION Calculator Subtract(Double val, Calculator aCalc)
+- - SET aCalc.vale = aCalc.value - val
+
+- - RETURN aCalc
+
+FUNCTION Calculator Multiply(Double val, Calculator aCalc)
+- - SET aCalc.vale = aCalc.value * val
+
+- - RETURN aCalc
+
+FUNCTION Calculator Divide(Double val, Calculator aCalc)
+- - SET aCalc.vale = aCalc.value / val
+
+- - RETURN aCalc
+
+FUNCTION Calculator Clear(Calculator aCalc)
+- - SET aCalc.vale = 0.0
+
+- - RETURN aCalc
+
+FUNCTION Calculator GetValue(Calculator aCalc)
+
+- - RETURN aCalc
+
+
+---- Calculator.h ----
+
+DEFINE Struct Calculator_struck as Calculator
+
+DECLARE Double value

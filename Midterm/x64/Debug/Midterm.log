@@ -1,0 +1,4 @@
+﻿  mid.c
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Midterm\mid.c(27,10): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [1]'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Midterm\mid.c(25,9): warning C4101: 'cycle': unreferenced local variable
+  Midterm.vcxproj -> D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Midterm\x64\Debug\Midterm.exe

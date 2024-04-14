@@ -1,0 +1,62 @@
+START
+
+DECLARE Const Double PI = 3.14159265358979323846
+DECLARE Const Double LOAD_FACTOR = 0.698
+
+DECLARE Double beanHeight = 0.0
+DECLARE Double beanWidth = 0.0
+DECLARE Double beanVol = 0.0
+DECLARE Double beanVolMax = 0.0
+DECLARE Int beanEst = 0
+DECLARE Double beanEstMax = 0.0
+DECLARE Double beanTotal = 0
+DECLARE Int jarVol = 0
+DECLARE Int jarVolMax = 0
+DECLARE Char userInputStr[256] = ""
+DECLARE Double runCount = 0.0
+
+SET userInputStr[0] = "y"
+
+DISPLAY "Welcome to my estimator for Jellybeans-in-the-jar!"
+
+WHILE userInputStr[0] = "y" OR userInputStr[0] = "Y"
+- - SET beanHeight = 0.0
+- - SET beanWidth = 0.0
+- - SET beanEst = 0.0
+- - 
+- - DISPLAY "Please enter the Length and Height of the Jellybean in CM."
+- - DISPLAY "Data must be seperated by a space (ie: 2.1 3.4): 
+- - 
+- - INPUT beanHeight, beanWidth
+- - 
+- - DISPLAY "Given Jellybean height: " + beanHeight
+- - DISPLAY "Given Jellybean width: " + beanWidth
+- - 
+- - DISPALY "Please enter the jar size in ml: "
+- - INPUT jarVol
+- - DISPLAY "Given jar volume: " + jarVol
+- - 
+- - SET beanVol = (5 * PI * beanHeight * (beanWidth^2))
+- - SET beanEst = ((jarVol * LOAD_FACTOR) / beanVol)
+- - SET beanTotal = beanTotal + beanEst
+- - DISPLAY "Estimated number of beans in the jar: " + beanEst
+- - 
+- - IF beanVol > beanVolMax
+- - - - SET beanVolMax = beanVol
+- - 
+- - IF beanEst > beanEstMax
+- - - - SET beanEstMax = beanEst
+- - - - SET jarVolMax = jarVol
+- - 
+- - DISPLAY "Would you like to run this program again? (Yes/No): "
+- - INPUT userInputStr
+- - SET runCount = ruCount + 1
+
+DISPLAY "Total entries given: " + runCount
+DISPLAY "The average number of Jellybeans was: " + (beanTotal / runCount)
+DISPLAY "The jar size for the largest Jellybean est. was: " + beanVolMax + "cm^3"
+DISPLAY "The jar size for the largest Jellybean est. was: " + jarVolMax + "ml"
+
+DISPLAY "Thanks for using this calculator!"
+
+END
