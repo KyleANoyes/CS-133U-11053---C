@@ -1,0 +1,38 @@
+DECLARE File* inFile = NULL
+DECLARE File* outFile = NULL
+DECLARE Int fileData1[250]
+DECLARE Int fileData2[250]
+DECLARE Int arrSize
+DECLARE Int i
+DECLARE Int calcResult
+
+DISPLAY "Welcome to my program!"
+DISPLAY Data processing message
+
+SET infile = FileOpen numbers.txt arg Read
+SET outFile = FileOpen output.txt arg Write
+
+IF inFile == NULL or outFile == NULL
+- - DISPLAY "This file can not be opened"
+
+ELSE
+- - WRITE ""  to outFile
+- - READ inFile; SET arrSize = first int in inFile
+- - 
+- - FOR i = 0 TO i < arrSize
+- - - - SET fileData1[i] = inFile next Int; SET fileData2[i] = inFile next Int
+- - 
+- - FOR i = 0 TO i < arrSize
+- - - - SET calcResult = fileData1[i] + fileData2[i]
+- - - - WRITE calcResult TO outFile
+- - 
+- - FOR i = 0 TO i < arrSize
+- - - - SET calcResult = fileData1[i] + fileData2[i]
+- - - - DISPLAY calcResult
+- - 
+- - DISPLAY "Thank you for using my program!"
+
+FILE Close inFile
+FILE Close outFile
+
+RETURN 0
