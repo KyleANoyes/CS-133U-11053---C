@@ -1,0 +1,22 @@
+Sometimes you will see an activity at a fair where people are asked to guess how many jellybeans 
+there are in a jar. Sometimes prizes are given to the person who guesses a number closest to 
+the actual number. You can use a little math and write a program to solve this problem for any 
+size jelly bean and jar!
+
+
+Purpose
+The purpose of this assignment is to develop an algorithm and a working C program, to calculate 
+the number of jellybeans in a jar, given the dimensions of a jellybean, and the capacity of the 
+jar. 
+
+Then you will output some statistics based on the information the user has entered. You will be 
+entering in jar and jellybean dimensions, and you will continue asking the user for jar and 
+jellybean dimensions until they are done. While the user wants to add more input, you will add 
+the data to accumulators (an accumulator is a variable the program uses to calculate a sum or 
+product of a series of values) to perform statistical analysis after they are done.
+
+After completing this assignment you will be able to:
+Use a do while loop to prompt the user for at least one set of jar and jellybean dimensions
+Use an accumulator to keep track of the total number of jellybeans all the jars can hold, and then number of entries entered by the user
+Use a min/max algorithm to determine the largest jellybean and jar size that contains the largest estimate of jellybeans
+Calculate the average number of jellybeans the jars can hold

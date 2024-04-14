@@ -1,0 +1,24 @@
+Welcome to my Jelly Bean Guesser program!
+
+Enter the length of a jelly bean (cm) and the height of a jelly bean (cm) separated by a space: 1.52 0.9
+Enter the jar size (ml): 500
+Estimate of jelly beans in the jar: 433
+
+Do you want to enter more (y/n): y
+
+Enter the length of a jelly bean (cm) and the height of a jelly bean (cm) separated by a space: 2.0 1.0
+Enter the jar size (ml): 25
+Estimate of jelly beans in the jar: 13
+
+Do you want to enter more (y/n): y
+
+Enter the length of a jelly bean (cm) and the height of a jelly bean (cm) separated by a space: 1.9 1.3
+Enter the jar size (ml): 250
+Estimate of jelly beans in the jar: 83
+
+Do you want to enter more (y/n): n
+
+Number of entries: 3
+Average number of jelly beans: 176.33
+Largest jelly bean: 2.10 cm^3
+Jar size for largest jelly bean estimate: 500 mL

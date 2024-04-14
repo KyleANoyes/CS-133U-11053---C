@@ -1,0 +1,4 @@
+﻿  main.c
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment05\main.c(35,25): warning C4047: '=': 'char' differs in levels of indirection from 'char [1]'
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment05\main.c(195,29): warning C4047: '=': 'char' differs in levels of indirection from 'char [1]'
+  Assignment05.vcxproj -> D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment05\x64\Debug\Assignment05.exe

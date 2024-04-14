@@ -1,0 +1,16 @@
+﻿  main.c
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(40,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(45,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(73,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(78,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(106,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(111,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(154,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(159,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(189,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(194,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(222,32): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(227,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(252,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\main.c(14,10): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char [2]'
+  Assignment06.vcxproj -> D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment06\x64\Debug\Assignment06.exe

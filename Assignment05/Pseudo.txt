@@ -1,0 +1,174 @@
+DECLARE Double userInputDub = 0.0
+DECLARE Integer userInputInt = 0
+DECLARE String userInputStr = ""
+DECLARE Integer stockID[99]
+DECLARE Integer stockName[99]
+DECLARE Double stockPriceNow[99]
+DECLARE Double stockPriceStart[99]
+DECLARE Integer parseID = 0
+DECLARE Double parsePriceNow = 0.0
+DECLARE Double parsePriceStart = 0.0
+DECLARE Integer keepGoing = 0
+DECLARE Integer didRun = 0
+DECLARE Integer i = 0
+
+
+- - DISPLAY "Welcome to this stock tracking program!"
+
+WHILE userInputStr[255] != "q"
+- - SET keepGoing = 0
+- - SET userInputDub = 0
+- - SET didRun = 0
+
+- - DISPLAY "Main menu"
+- - DISPLAY "Please select one of the options below by entering the option name or first letter"
+
+- - DISPLAY "Create - Create new stock data for any ID"
+- - DISPLAY "Delete - Remove stock data for a given ID"
+- - DISPLAY "Update - Update a currently existing stock price"
+- - DISPLAY "Price Filter - Display all stock data above a given price"
+- - DISPLAY "Show All - Display all recorded stock data"
+- - DISPLAY "Quit - Terminate the program"
+- - 
+- - DISPLAY "Please Enter selection: "
+- - INPUT userInputStr
+- -
+- - IF userInputStr[0] == "c" OR userInputStr[0] == "C" AND didRun != 1
+- - - - SET didRun = 1
+- - - - DISPLAY "You have entered the Stock Creation menu."
+- - - - 
+- - - - DISPLAY "Please enter an ID greater-than or equal to 0 and less than 100"
+- - - - INPUT userInputInt
+- - - - 
+- - - - IF userInputInt >= 0 and < 100
+- - - - - - IF stockID[userInputInt] != 1 AND keepGoing != 1
+- - - - - - - - SET parseID = userInputInt
+- - - - - - - - DISPLAY "Selected ID: {userInputInt}"
+- - - - - - - - 
+- - - - - - - - IF userInputStr != ""
+- - - - - - - - - - SET parseName = userInputStr
+- - - - - - - - - - DISPLAY "Chosen name {parseName}"
+- - - - - - - - - - 
+- - - - - - - - - - DISPLAY "Please enter the Stock price"
+- - - - - - - - - - INPUT userIntDub
+- - - - - - - - - - 
+- - - - - - - - - - IF userIntDub >= 0
+- - - - - - - - - - - - SET parsePriceNow = userIntDub
+- - - - - - - - - - - - SET parsePriceStart = userIntDub
+- - - - - - - - - - - - DISPLAY "Stock price successfully set to {userIntDub}"
+- - - - - - - - - - - - 
+- - - - - - - - - - - - DISPLAY "Created data: "
+- - - - - - - - - - - - DISPLAY DISPLAY "Stock ID: {parseID} - - Current price: {parsePriceNow}"
+- - - - - - - - - - - - SET stockID[parseID] = 1
+- - - - - - - - - - - - SET stockName[parseID] = parseName
+- - - - - - - - - - - - SET stockPriceNow[parseID] = parsePriceNow
+- - - - - - - - - - - - SET stockPriceStart[parseID] = parsePriceNow
+- - - - - - - - - - - - 
+- - - - - - - - ELSE
+- - - - - - - - - - DISPLAY "Input can not be less than zero
+- - - - - - - - - - SET keepGoing = 1
+- - - - - - 
+- - - - - - ELSE
+- - - - - - - - DISPLAY "Stock name can not be blank"
+- - - - - - - - SET keepGoing = 1
+- - - - - -
+- - - - ELSE
+- - - - - - DISPLAY "Stock data already exist at this ID. Please remove or edit this data."
+- - - - - - SET keepGoing = 1
+
+- - IF userInputStr[0] == "u" OR userInputStr[0] == "U" AND didRun != 1
+- - - - SET didRun = 1
+- - - - DISPLAY "You have entered the Stock Update menu."
+- - - - DISPLAY "Please enter the Stock ID you would like to update: "
+- - - - INPUT userInputInt
+- - - - 
+- - - - IF userInputInt <= 0 AND > 100
+- - - - - - SET parseID = userInputInt
+- - - - - - SET parseName = stockName[userInputInt]
+- - - - - - SET parsePriceNow = stockPriceNow[userInputInt
+- - - - - - SET parsePriceStart = stockPriceStart[userInputInt]
+- - - - - - 
+- - - - - - IF parseName != ""
+- - - - - - - - DISPLAY "Stock ID: {parseID} - - Stock Name: {parseName} - - Current price: {parsePriceNow} - - Starting price: {parsePriceStart}"
+- - - - - - - - DISPLAY "Please enter the new stock price."
+- - - - - - - - INPUT userInputDub
+- - - - - - - -
+- - - - - - - -
+- - - - - - - - IF userInputDub >= 0
+- - - - - - - - - - SET stockPriceNow[indexPoint] = userInputDub
+- - - - - - - - - - DISPLAY "Stock ID: {parseID} new price set as {userInputDub}"
+- - - - - - - - 
+- - - - - - ELSE
+- - - - - - DISPLAY "No data for Stock ID {i}. Please use creation menu or choose a new ID"
+- - - - 
+- - - - ELSE
+- - - - - - DISPLAY "Input must be a num between 0 and 100"
+
+- - IF userInputStr[0] == "d" OR userInputStr[0] == "D" AND didRun != 1
+- - - - SET didRun = 1
+- - - - DISPLAY "You have entered the Stock removal menu."
+- - - - 
+- - - - DISPLAY "Please enter an ID greater-than or equal to 0 and less than 100"
+- - - - INPUT userInputInt
+- - - - 
+- - - - IF userInputInt >= 0 AND userInputInt < 100 AND keepGoing != 0
+- - - - - - IF stockID[userInputInt] = 1
+- - - - - - - - SET parseID = userInputInt
+- - - - - - - - DISPLAY "Stock data found."
+- - - - - - - - DISPLAY "Stock ID: {parseID} - - Stock Name: {parseName} - - Current price: {parsePriceNow} - - Starting price: {parsePriceStart}"
+- - - - - - - - DISPLAY "Type Yes to delete this data, or No to keep this data"
+- - - - - - - - INPUT userInputStr
+- - - - - - - - IF userInputStr[0] == "y" OR userInputStr[0] == "Y"
+- - - - - - - - - - SET stockID[userInputInt] = 0
+- - - - - - - - - - SET stockName[userInputInt] = ""
+- - - - - - - - - - SET stockPriceNow[userInputInt] = 0
+- - - - - - - - - - SET stockPriceStart[userInputInt] = 0
+- - - - - - - - - - DISPLAY "All data deleted for this stock ID"
+- - - - - - ELSE
+- - - - - - - - DISPLAY "No stock data recorded for this ID"
+
+
+- - IF userInputStr[0] == "p" OR userInputStr[0] == "P" AND didRun != 1
+- - - - DISPLAY "You have entered the price filter menu."
+- - - - DISPLAY "Please enter the minimum price filter: "
+- - - - INPUT userInputDub
+- - - - FOR i = 0 TO 99
+- - - - - - IF stockID[i] == 1
+- - - - - - - - SET didRun = 1
+- - - - - - - - IF stockPriceNow[i] >= userInputDub
+- - - - - - - - - - DISPLAY "Stock ID: {stockID[i]} - - Stock Name: {stockName[i]} - - Current price: {stockPriceNow[i]} - - Starting price: {stockPriceStart[i]}"
+- - - - IF didRun == 1
+- - - - - - DISPLAY "Data parse complete."
+- - - - ELSE
+- - - - - - DISPLAY "No stock data found at or above filter price of {userInputDub}. Please run again."
+- - - - SET didRun = 1
+
+- - IF userInputStr[0] == "d" OR userInputStr[0] == "D" AND didRun != 1
+- - - - FOR i = 0 TO 99
+- - - - - - IF stockID[i] == 1
+- - - - - - - - SET didRun = 1
+- - - - - - - - DISPLAY "Stock ID: {stockID[i]} - - Stock Name: {stockName[i]} - - Current price: {stockPriceNow[i]} - - Starting price: {stockPriceStart[i]}"
+- - - - IF didRun == 1
+- - - - - - DISPLAY "Data parse complete."
+- - - - ELSE
+- - - - - - DISPLAY "No stock data found. Please create data then run again."
+- - - - SET didRun = 1
+
+- - IF userInputStr[0] == "q" OR userInputStr[0] == "Q" AND didRun != 1
+- - - - SET userInputStr[0] = ""
+- - - - DISPLAY "Please retype Quit to confirm."
+- - - - INPUT userInputStr
+- - - - IF userInputStr[0] == "q" OR userInputStr[0] == "Q"
+- - - - - - userInputStr[255] = "q"
+- - - - ELSE
+- - - - - - SET userInputStr[0] = ""
+- - - - - - DISPLAY "Aborted program end sequence."
+
+
+- - IF keepGoing != 0
+- - - - DISPLAY "Changes successfully discarded. Returning to the main menu."
+
+- - IF didRun == 0
+- - - - DISPLAY "{userInputStr} is an invalid option. Returning to the main menu."
+
+DISPLAY Program is now ending. Thank you for using my tracking tool!

@@ -1,0 +1,137 @@
+Welcome to my fileName encoding program!!
+
+Please pick an option below:
+(e)Encode a file name
+(q)quit
+>>e
+This program will ask you a few questions and generate an encoded fileName based on your answers.
+Enter your last name: Iyer
+Enter your first name: GD
+Was your assignment Late (y/n)? Y
+Enter your Student-ID (format: 222-22-2222): 234-05-4556
+Enter the time submitted (military time - ex: 18:24 for 6:24pm): 13:45
+Enter the file name: a06.c
+Your file name is: iyer_gd_LATE_4556_1345_a06.c
+Thank you for using my fileName generator!
+
+
+DECLARE Str userChoice = ""
+DECLARE Str fileName[256] = ""
+DECLARE Int lengthPreCat = 0
+DECLARE Int lengthPostCat = 0
+DECLARE Int keepGoing = 0
+
+
+DISPLAY "Hello! Welcome to this file name encoder"
+
+WHILE userChoice != "Q"
+- - DISPLAY "Please choose an option from the list below"
+- - 
+- - DISPLAY "Type the word in parenthesis to select this option"
+- - DISPLAY "(Enocde) - Develop a file name based on a series of questions"
+- - DISPLAY "(Help) - Summary of how the encoding system works"
+- - DISPLAY "(Quit) - Quit this program"
+- - 
+- - DISPLAY "Input menu selection: "
+- - INPUT userChoice
+- - 
+- - IF userChoice[0] == "e" OR userChoice[0] == "E"
+- - - - DISPLAY "You have entered the encode mode"
+- - - - DISPLAY "Please answer the following questions. Once completed,"
+- - - - DISPLAY "this program will print a complete file name"
+- - - - 
+- - - - 
+- - - - DO
+- - - - - - SET lengthPreCat = length(fileName)
+- - - - - - SET keepGoing = 1
+- - - - - - DISPLAY "Please enter your last name: "
+- - - - - - INPUT fileName
+- - - - - - IF fileName == [A-Z] AND fileName == [0-9] AND fileName == [_]
+- - - - - - - - SET fileName == fileName + "_"
+- - - - - - - - keepGoing = 0
+- - - - - - ELSE
+- - - - - - - - DISPLAY "File name can only contain A-Z and 0-9 characters. Please try again"
+- - - - - - - - FOR i = lengthPreCat TO lengthPostCat
+- - - - - - - - - - fileName[i] = "\0"
+- - - - WHILE keepGoing == 1
+- - - - 
+- - - - DO
+- - - - - - SET lengthPreCat = length(fileName)
+- - - - - - SET keepGoing = 1
+- - - - - - DISPLAY "Please enter your first name: "
+- - - - - - INPUT fileName
+- - - - - - IF fileName == [A-Z] AND fileName == [0-9] AND fileName == [_]
+- - - - - - - - SET fileName == fileName + "_"
+- - - - - - - - keepGoing = 0
+- - - - - - ELSE
+- - - - - - - - DISPLAY "File name can only contain A-Z and 0-9 characters. Please try again"
+- - - - - - - - FOR i = lengthPreCat TO lengthPostCat
+- - - - - - - - - - fileName[i] = "\0"
+- - - - WHILE keepGoing == 1
+- - - - 
+- - - - DO
+- - - - - - SET lengthPreCat = length(fileName)
+- - - - - - SET keepGoing = 1
+- - - - - - DISPLAY "Was your assignment late? (y/n): "
+- - - - - - INPUT fileName
+- - - - - - IF fileName == [A-Z] AND fileName == [0-9] AND fileName == [_]
+- - - - - - - - SET fileName == fileName + "_"
+- - - - - - - - keepGoing = 0
+- - - - - - ELSE
+- - - - - - - - DISPLAY "File name can only contain A-Z and 0-9 characters. Please try again"
+- - - - - - - - FOR i = lengthPreCat TO lengthPostCat
+- - - - - - - - - - fileName[i] = "\0"
+- - - - WHILE keepGoing == 1
+- - - - 
+- - - - DO
+- - - - - - SET lengthPreCat = length(fileName)
+- - - - - - SET keepGoing = 1
+- - - - - - DISPLAY "What is your student ID? (ie: 123-45-6789): "
+- - - - - - INPUT fileName
+- - - - - - IF fileName == [A-Z] AND fileName == [0-9] AND fileName == [_] AND fileName == [-]
+- - - - - - - - SET fileName == fileName + "_"
+- - - - - - - - keepGoing = 0
+- - - - - - ELSE
+- - - - - - - - DISPLAY "Input can only contain numbers 0-9 and dashes. Please try again"
+- - - - - - - - FOR i = lengthPreCat TO lengthPostCat
+- - - - - - - - - - fileName[i] = "\0"
+- - - - WHILE keepGoing == 1
+- - - -
+- - - - DO
+- - - - - - SET lengthPreCat = length(fileName)
+- - - - - - SET keepGoing = 1
+- - - - - - DISPLAY "Enter the submission time using a 24 hour format (ie: 14:37): "
+- - - - - - INPUT fileName
+- - - - - - IF fileName == [A-Z] AND fileName == [0-9] AND fileName == [_]
+- - - - - - - - SET fileName == fileName + "_"
+- - - - - - - - keepGoing = 0
+- - - - - - ELSE
+- - - - - - - - DISPLAY "File name can only contain A-Z and 0-9 characters. Please try again"
+- - - - - - - - FOR i = lengthPreCat TO lengthPostCat
+- - - - - - - - - - fileName[i] = "\0"
+- - - - WHILE keepGoing == 1
+- - - - 
+- - - - DO
+- - - - - - SET lengthPreCat = length(fileName)
+- - - - - - SET keepGoing = 1
+- - - - - - DISPLAY "please enter the file name (ie: unit.py): "
+- - - - - - INPUT fileName
+- - - - - - IF fileName == [A-Z] AND fileName == [0-9] AND fileName == [_]
+- - - - - - - - keepGoing = 0
+- - - - - - ELSE
+- - - - - - - - DISPLAY "File name can only contain A-Z and 0-9 characters. Please try again"
+- - - - - - - - FOR i = lengthPreCat TO lengthPostCat
+- - - - - - - - - - fileName[i] = "\0"
+- - - - WHILE keepGoing == 1
+- - - - 
+- - - - IF lengthPostcat > 100
+- - - - - - DISPLAY "WARNING: File name exceeds maximum allowed 100 characters. Recommend redo!"
+- - - - 
+- - - - FOR i = 0 TO i = lengthPostcat
+- - - - - - IF fileName[i] is alpha
+- - - - - - - - SET fileName[i] = lower(fileName[i])
+- - - - DISPLAY "File name: {fileName}"
+- - ELSE
+- - - - DISPLAY "Given input was invalid. Please type the option name within the parentheses"
+- -
+DISPLAY "Thank you for using my program! Good bye :)"

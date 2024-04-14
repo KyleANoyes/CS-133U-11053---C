@@ -1,0 +1,4 @@
+﻿  main.c
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment04\main.c(39,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment04\main.c(57,42): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+  Assignment04.vcxproj -> D:\Dropbox\PCC\Winter 2024\CS-133U-11053 - C\Assignment04\x64\Debug\Assignment04.exe
